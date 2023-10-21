@@ -5,7 +5,10 @@ import NewsCard from "./Card/Card";
 
 
 
+
 const Home = () => {
+
+
 
     const [news, setNews] = useState([]);
     const [url, setUrl] = useState('');

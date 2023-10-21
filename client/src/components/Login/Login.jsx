@@ -7,7 +7,6 @@ const Login = () => {
   const [data, setData] = useState({});
   const [message, setMessage] = useState(false);
 
-  console.log(data);
   const {status, msg} = data;
   return (
     <div className='login_container'>

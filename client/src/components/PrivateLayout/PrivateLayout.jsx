@@ -1,17 +1,28 @@
-import { Outlet } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthProvider';
+import { Navigate, Outlet } from 'react-router-dom';
 import Header from '../Header/Header';
 
 
 const PrivateLayout = () => {
-  return (
-    <>  
-        {/* Header */}
-        <Header/>
 
-        {/* CONTENIDO PRINCIPAL */}
+  const {auth} = useContext(AuthContext);
+
+  return (
+    <> 
+      {/* Header */}
+      <Header/>
+      {
+        auth.id ? (
+
         <section className='layout__content'>
             <Outlet/>
         </section>
+        ):(
+            <Navigate to='/login'/>
+        )
+      }
+        
     </>
   )
 }

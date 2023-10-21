@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+import { AuthContext } from "../../../context/AuthProvider";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import useForm from "../../../hooks/useForm";
@@ -6,6 +8,9 @@ import { Global } from "../../../helpers/Global";
 
 const FormLogin = ({setData, setMessage}) => {
   
+  const {setAuth} = useContext(AuthContext);
+
+
   const { form, changed } = useForm({});
 
   const checkUser = async (e) => {
@@ -13,7 +18,6 @@ const FormLogin = ({setData, setMessage}) => {
     console.log(form);
     
     let userloged = form;
-    console.log(userloged);
     
     const request = await fetch(Global.url + '/login', {
       method: "POST",
@@ -25,16 +29,16 @@ const FormLogin = ({setData, setMessage}) => {
 
     const dataLogin = await request.json();
 
-    console.log(dataLogin.userExists);
-
-
 
     if(dataLogin.status === 'success'){
       localStorage.setItem('token', dataLogin.token);
       localStorage.setItem('user', JSON.stringify(dataLogin.userExists));
 
+      setAuth(dataLogin.userExists);
       setData(dataLogin);
       setMessage(true);
+      
+
     }else {
       setData(dataLogin);
       setMessage(true);
