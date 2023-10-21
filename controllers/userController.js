@@ -76,7 +76,7 @@ const login = async (req, res) => {
     if(!params.email || !params.password){
         return res.status(400).send({
             status: 'Error',
-            msg: 'Falta usuario o contraseña'
+            msg: 'Falta email o contraseña'
         });
     }
 
