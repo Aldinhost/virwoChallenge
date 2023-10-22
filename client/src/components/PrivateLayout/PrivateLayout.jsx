@@ -10,8 +10,16 @@ const PrivateLayout = () => {
 
   return (
     <> 
-      {/* Header */}
-      <Header/>
+
+      {
+         auth.id ? (
+
+          <Header/>
+          ):(
+              <Navigate to='/login'/>
+          )
+      }
+      
       {
         auth.id ? (
 

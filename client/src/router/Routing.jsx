@@ -6,6 +6,7 @@ import PrivateLayout from '../components/PrivateLayout/PrivateLayout';
 import Home from '../components/Home/Home';
 import Error404 from '../components/Error404/Error404';
 import AuthContextProvider from '../context/AuthProvider';
+import Logout from '../User/LogOut/Logout';
 
 
 const Routing = () => {
@@ -21,6 +22,7 @@ const Routing = () => {
 
                 <Route path='/home' element={<PrivateLayout/>}>
                     <Route index element={<Home/>}/>
+                    <Route path='logout' element={<Logout/>} />
                 </Route>
 
                 <Route path='*' element={<Error404/>}>

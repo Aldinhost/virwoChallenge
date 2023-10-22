@@ -2,6 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { BiUserCircle } from "react-icons/bi";
+import { NavLink } from 'react-router-dom';
 
 const NavbarComponent = () => {
   
@@ -13,7 +14,7 @@ const NavbarComponent = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a href="#login"><BiUserCircle/></a>
+            <NavLink to="/home/logout"><BiUserCircle/></NavLink>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
