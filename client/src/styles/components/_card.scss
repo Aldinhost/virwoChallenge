@@ -1,0 +1,25 @@
+.cards_container{
+    margin: 0 auto;
+    .newCard{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        min-height: 370px;
+        .cardImage{
+            height: 150px;
+        }
+        .cardBody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            .cardLink{
+                display: block;
+                width: 100%;
+                text-align: end;
+            }
+        }
+
+    }
+}
+

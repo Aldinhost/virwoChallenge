@@ -1,0 +1,17 @@
+.error404_container{
+    background-color: #4c4c4c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    h1{
+        font-size: 12rem;
+        color: #cdcdcd;
+    }
+    p{
+        font-size: 3rem;
+        color: #8457ff;
+    }
+}
