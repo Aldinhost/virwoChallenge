@@ -1,0 +1,39 @@
+.filterNav{
+    background: none;
+    color: #393939;
+    .active{
+        background-color: #070707 !important;
+        color: #ffffff;
+    }
+}
+
+.home_date{
+    padding: 0.5rem 1rem;
+    border: 1px solid #a8a8a8;
+    border-radius: 3px;
+    h3{
+        color: #393939;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: end;
+        margin: 0;
+    }
+
+    .home_date-icon{
+        height: 100%;
+        width: 1.5rem;
+        border-left: 1px solid #a8a8a8;
+        padding: 0 0 0 5px;
+    }
+
+}
+
+.home_search-button{
+    background-color: #dedede;
+    border: none;
+}
+
+.home_search-icon{
+    height: 100%;
+    width: 1.5rem;
+}

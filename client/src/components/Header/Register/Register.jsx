@@ -6,7 +6,6 @@ const Register = () => {
   const [data, setData] = useState({});
   const [message, setMessage] = useState(false);
 
-
   const {status, msg} = data;
 
 
